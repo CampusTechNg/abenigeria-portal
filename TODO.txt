@@ -1,0 +1,23 @@
+Upload the following files:
+
+*	create-admission-requirement.blade
+*	create-upload.blade
+*	create-contact-info.blade
+*	create-profile-info.blade
+*	create-course-info.blade
+*	create-finish-reg.blade
+
+//admin
+*	edit-student.blade
+*	student-form.blade
+
+app/Request
+*	PostPersonalInfoRequest.php
+
+
+Controllers
+*	StudentRegPersonalInfoController.php
+*	StudentRegUploadController.php
+*	StudentRegCourseInfoController.php
+*	StudentController.php
+8	StudentRegFinishController.php
