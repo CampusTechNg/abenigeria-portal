@@ -51,7 +51,7 @@
                                                     <select class="form-control" id="campus" name="campus">
                                                         <option value=""></option>
                                                         <option value="Abuja" {{ ($student->campus == 'Abuja' or old('campus') == 'Abuja') ? 'selected' : '' }}>Abuja</option>
-                                                        <option value="Kaduna" {{ ($student->campus == 'Kaduna' or old('campus') == 'Kaduna') ? 'selected' : '' }}>Kaduna</option>
+                                                        {{--  <option value="Kaduna" {{ ($student->campus == 'Kaduna' or old('campus') == 'Kaduna') ? 'selected' : '' }}>Kaduna</option>  --}}
                                                         <option value="Kano" {{ ($student->campus == 'Kano' or old('campus') == 'Kano') ? 'selected' : '' }}>Kano</option>
                                                     </select>
                                                     @if ($errors->has('campus'))
@@ -60,6 +60,19 @@
                                                         </span>
                                                     @endif
                                                     <label for="campus">Campus <span class="text-danger">*</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row" id="class_resumption">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <div class="form-material">
+                                                    <p id="resumption_date">
+
+                                                    </p>
+                                                    <label id="date_label"></label>
                                                 </div>
                                             </div>
                                         </div>
@@ -138,6 +151,8 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
+        $('#class_resumption').hide();
+        
         $('#course').change(function(){
             //Remove all modules that may be selected already
             $('#modules').empty();
@@ -163,6 +178,24 @@
             }
             $('#modules_row').show();
             
+        });
+
+        $('#campus').change(function(){
+            $('#resumption_date').empty();
+            $('#date_label').empty();
+            $('#class_resumption').hide();
+
+            var campus = $('#campus option:selected').val();
+
+            if(campus == 'Abuja'){
+                $('#class_resumption').show();
+                $('#date_label').append('Resumption Date');
+                $('#resumption_date').append('2nd July, 2018');
+            } else if(campus == 'Kano') {
+                $('#class_resumption').show();
+                $('#date_label').append('Resumption Date');
+                $('#resumption_date').append('9th April, 2018');
+            }
         });
 
     });
