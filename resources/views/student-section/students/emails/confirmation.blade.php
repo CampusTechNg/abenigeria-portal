@@ -83,7 +83,10 @@
                                                                                                             </p><br>
 
                                                                                                             <p style="margin:0 0 10px 0;font-size:15px;line-height:24px">
-                                                                                                                Please note that lectures will commence on the 26th of March,2018, therefore, you are required to have completed your application before then.  
+                                                                                                                Please note that lectures will commence on the following dates:
+                                                                                                                Kano Centre: Monday,April 9th, 2018. <br>
+                                                                                                                Abuja Centre: Monday, July 2nd, 2018. <br>
+                                                                                                                Therefore, you are required to have completed your application before the aforementioned dates.  
                                                                                                             </p><br>
 
                                                                                                             <p style="margin:0 0 10px 0;font-size:15px;line-height:24px">
